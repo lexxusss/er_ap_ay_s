@@ -19,8 +19,9 @@ class CalculateCommissionsCommand extends Command
         InputParserInterface $parser,
         CommissionCalculatorInterface $commissionCalculator
     ): void {
-        $filename = $this->argument('filename');
-        $transactions = $parser->parse($filename);
+        $transactions = $parser->parse(
+            $this->argument('filename')
+        );
 
         $commissionCalculator->calculate($transactions);
 
