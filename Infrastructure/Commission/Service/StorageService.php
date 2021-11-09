@@ -20,7 +20,9 @@ class StorageService implements StorageServiceInterface
 
     public function getData(string $filename): array
     {
-        $content = trim($this->storage->get($filename));
+        $content = $this->stringService->clearContent(
+            $this->storage->get($filename)
+        );
 
         return $this->stringService->splitStrings($content);
     }

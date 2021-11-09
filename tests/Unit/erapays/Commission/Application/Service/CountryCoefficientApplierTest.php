@@ -52,13 +52,13 @@ class CountryCoefficientApplierTest extends TestCase
     public function applyDataProvider(): array
     {
         return [
-            // countryCode is euro: 100.0 * 1.0
+            // countryCode is euro: 100.0 * 1.0 = 100.0
             [
                 'countryCode' => 'PT',
                 'amount' => 100.0,
                 'res' => 100.0,
             ],
-            // countryCode is not euro: 100.0 * 2.0
+            // countryCode is not euro: 100.0 * 2.0 = 200.00
             [
                 'countryCode' => 'US',
                 'amount' => 100.0,
