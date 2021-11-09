@@ -54,6 +54,13 @@ return [
             'path' => storage_path('framework/cache/data'),
         ],
 
+        'commissions' => [
+            'driver' => 'file',
+            'path' => storage_path('framework/cache/commissions'),
+            'country_code_ttl' => env('STORE_COUNTRY_COMMISSIONS_CACHE_TTL', 'PT1H'),
+            'currency_rate_ttl' => env('STORE_COUNTRY_COMMISSIONS_CACHE_TTL', 'PT1H'),
+        ],
+
         'memcached' => [
             'driver' => 'memcached',
             'persistent_id' => env('MEMCACHED_PERSISTENT_ID'),
