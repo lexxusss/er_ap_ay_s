@@ -6,7 +6,6 @@ require 'StringParser.php';
 
 /**
  *
- * aurimas.pelanis@paysera.net
  * Task v3
 Before or while performing this task, consider refactoring your code into OOP.
 
